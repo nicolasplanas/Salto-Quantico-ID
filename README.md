@@ -1,2 +1,2 @@
-# Salto-Qu-ntico-ID
+# Salto-Quantico-ID
 Projeto Integrador Univesp
