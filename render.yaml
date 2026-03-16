@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: salto-quantico-backend
+    runtime: python
+    rootDir: backend
+    startCommand: flask run --host 0.0.0.0 --port $PORT
+    buildCommand: pip install -r requirements.txt
+    envVars:
+      - key: FLASK_APP
+        value: app.py
+      - key: FLASK_ENV
+        value: production
+
+  - type: static
+    name: salto-quantico-frontend
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    envVars:
+      - key: VITE_API_URL
+        value: https://salto-quantico-backend.onrender.com
