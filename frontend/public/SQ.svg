@@ -1,0 +1,68 @@
+<svg width="500" height="450" viewBox="0 0 500 450" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <!-- Gradiente principal -->
+    <radialGradient id="mainGradient" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#42e8f4"/>
+      <stop offset="40%" stop-color="#5b7cff"/>
+      <stop offset="70%" stop-color="#c23cf5"/>
+      <stop offset="100%" stop-color="#ff2f92"/>
+    </radialGradient>
+
+    <!-- Gradiente azul para esferas -->
+    <radialGradient id="blueSphere" cx="40%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#55f2ff"/>
+      <stop offset="100%" stop-color="#1e7bff"/>
+    </radialGradient>
+
+    <!-- brilho suave -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+  </defs>
+
+  <!-- círculo principal -->
+  <circle
+    cx="250"
+    cy="220"
+    r="160"
+    fill="url(#mainGradient)"
+    filter="url(#glow)"
+  />
+
+  <!-- esfera superior esquerda -->
+  <circle
+    cx="130"
+    cy="120"
+    r="45"
+    fill="url(#blueSphere)"
+    opacity="0.9"
+    filter="url(#glow)"
+  />
+
+  <!-- esfera direita -->
+  <circle
+    cx="395"
+    cy="230"
+    r="40"
+    fill="url(#blueSphere)"
+    opacity="0.9"
+    filter="url(#glow)"
+  />
+
+  <!-- esfera inferior -->
+  <circle
+    cx="350"
+    cy="320"
+    r="65"
+    fill="url(#blueSphere)"
+    opacity="0.8"
+    filter="url(#glow)"
+  />
+
+</svg>
