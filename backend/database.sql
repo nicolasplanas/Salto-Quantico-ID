@@ -2,10 +2,14 @@ CREATE DATABASE talentbridge;
 
 USE talentbridge;
 
-CREATE TABLE talents (
+CREATE TABLE talent (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100),
-    email VARCHAR(100),
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    birth_date DATE,
     area VARCHAR(100),
-    skills TEXT
+    skills TEXT,
+    terms_accepted BOOLEAN DEFAULT FALSE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
