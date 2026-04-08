@@ -52,7 +52,7 @@ export default function Login() {
 
   return (
     <div className="login-page">
-      <Header />
+      <Header showNav={false} />
 
       <section className="login-section">
         <div className="login-container">
@@ -62,8 +62,7 @@ export default function Login() {
 
           <div className="login-box">
             <div className="login-header">
-              <h1>Bem-vindo Novamente</h1>
-              <p>Acesse sua conta no Salto Quântico ID</p>
+              <h1>Acesse sua Conta</h1>
             </div>
 
             {error && <div className="alert alert-error">{error}</div>}

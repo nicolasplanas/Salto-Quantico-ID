@@ -106,7 +106,7 @@ export default function Signup() {
 
   return (
     <div className="signup-page">
-      <Header />
+      <Header showNav={false} />
 
       <section className="signup-section">
         <div className="signup-container">
@@ -117,7 +117,6 @@ export default function Signup() {
           <div className="signup-box">
             <div className="signup-header">
               <h1>Crie sua Conta</h1>
-              <p>Junte-se ao Salto Quântico ID</p>
             </div>
 
             {error && <div className="alert alert-error">{error}</div>}

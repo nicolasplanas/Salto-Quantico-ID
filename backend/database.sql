@@ -1,8 +1,8 @@
-CREATE DATABASE talentbridge;
+CREATE DATABASE salto_quantico_id;
 
-USE talentbridge;
+USE salto_quantico_id;
 
-CREATE TABLE talent (
+CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL UNIQUE,
