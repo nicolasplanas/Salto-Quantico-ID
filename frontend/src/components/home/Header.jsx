@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Header.css';
 
 export default function Header({ showNav = true }) {
@@ -10,7 +11,7 @@ export default function Header({ showNav = true }) {
         <div className="header-content">
           <div className="logo">
             <span className="logo-icon">⚛</span>
-            <span className="logo-text">Salto Quântico ID</span>
+            <span onClick={() => window.location.href = "/"} className="logo-text">Salto Quântico ID</span>
           </div>
 
           {showNav && (
@@ -31,7 +32,7 @@ export default function Header({ showNav = true }) {
                 <a href="#services">Serviços</a>
                 <a href="#tech">Tecnologia</a>
                 <a href="#contact">Contato</a>
-                <button className="btn btn-primary btn-small">Começar</button>
+                <button onClick={() => window.location.href = "/register"} className="btn btn-primary btn-small">Começar</button> 
               </nav>
             </>
           )}

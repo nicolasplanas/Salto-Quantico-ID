@@ -14,7 +14,7 @@ export default function Hero() {
               Conectando talentos, conhecimento e oportunidades.
             </p>
             <div className="hero-buttons">
-              <button className="btn btn-primary">Explorar Soluções</button>
+              <button onClick={() => window.location.href = "/register"} className="btn btn-primary">Explorar Soluções</button>
               <button className="btn btn-secondary">Saiba Mais</button>
             </div>
           </div>
