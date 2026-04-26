@@ -1,0 +1,39 @@
+.feed {
+  background-color: #f5f5f5;
+  padding: 24px 0;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+.feed-container {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+.jobs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+@media (max-width: 1200px) {
+  .feed-container {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .feed {
+    padding: 16px 0;
+  }
+
+  .feed-container {
+    padding: 0 8px;
+  }
+
+  .jobs-list {
+    gap: 12px;
+  }
+}

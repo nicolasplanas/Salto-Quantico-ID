@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import './Header.css';
 
 export default function Header({ showNav = true }) {
