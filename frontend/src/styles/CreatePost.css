@@ -1,10 +1,10 @@
 .create-post {
-  background-color: #fff;
+  background-color: var(--card-bg);
   border-radius: 8px;
-  border: 1px solid #e5e5e5;
+  border: 1px solid var(--border-color);
   padding: 16px;
   margin-bottom: 8px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .create-post-content {
@@ -29,32 +29,32 @@
 .create-post-field {
   width: 100%;
   padding: 10px 16px;
-  border: 1px solid #d0d0d0;
+  border: 1px solid var(--input-border);
   border-radius: 20px;
   font-size: 14px;
-  color: #666;
-  background-color: #f5f5f5;
+  color: var(--light-text);
+  background-color: var(--input-bg);
   font-family: inherit;
   transition: all 0.2s ease;
   cursor: pointer;
 }
 
 .create-post-field:hover {
-  background-color: #efefef;
+  background-color: var(--hover-bg);
 }
 
 .create-post-field:focus {
   outline: none;
-  border-color: #0a66c2;
-  background-color: #fff;
-  color: #000;
+  border-color: var(--primary-color);
+  background-color: var(--dark-bg);
+  color: var(--light-text);
 }
 
 .create-post-actions {
   display: flex;
   gap: 8px;
   padding-top: 12px;
-  border-top: 1px solid #f0f0f0;
+  border-top: 1px solid var(--border-color);
   justify-content: space-around;
 }
 
@@ -63,7 +63,7 @@
   padding: 8px 12px;
   background: none;
   border: none;
-  color: #666;
+  color: var(--gray-text);
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
@@ -76,8 +76,8 @@
 }
 
 .create-action-btn:hover {
-  background-color: #f0f0f0;
-  color: #0a66c2;
+  background-color: var(--hover-bg);
+  color: var(--primary-color);
 }
 
 .create-action-btn span {

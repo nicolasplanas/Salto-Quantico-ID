@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import ThemeToggle from '../ThemeToggle';
 import './Header.css';
 
 export default function Header({ showNav = true }) {
@@ -31,7 +32,10 @@ export default function Header({ showNav = true }) {
                 <a href="#services">Serviços</a>
                 <a href="#tech">Tecnologia</a>
                 <a href="#contact">Contato</a>
-                <button onClick={() => window.location.href = "/register"} className="btn btn-primary btn-small">Começar</button> 
+                <div className="nav-actions">
+                  <ThemeToggle />
+                  <button onClick={() => window.location.href = "/register"} className="btn btn-primary btn-small">Começar</button>
+                </div>
               </nav>
             </>
           )}

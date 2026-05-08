@@ -1,5 +1,5 @@
 .feed {
-  background-color: #f5f5f5;
+  background-color: var(--darker-bg);
   padding: 24px 0;
   min-height: 100vh;
   overflow-y: auto;

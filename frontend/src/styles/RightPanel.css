@@ -1,6 +1,6 @@
 .right-panel {
-  background-color: #fff;
-  border-left: 1px solid #e5e5e5;
+  background-color: var(--darker-bg);
+  border-left: 1px solid var(--border-color);
   padding: 24px 12px;
   display: flex;
   flex-direction: column;
@@ -15,12 +15,68 @@
   margin: 0 0 16px 0;
   font-size: 15px;
   font-weight: 700;
-  color: #000;
+  color: var(--light-text);
+}
+
+.profile-section {
+  padding: 16px;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.profile-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary-color);
+}
+
+.profile-name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--light-text);
+}
+
+.profile-email {
+  margin: 0;
+  font-size: 13px;
+  color: var(--gray-text);
+  word-break: break-all;
+}
+
+.edit-profile-btn {
+  padding: 8px 16px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+  font-family: inherit;
+}
+
+.edit-profile-btn:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 217, 255, 0.3);
 }
 
 .trending-section {
   padding: 16px;
-  background-color: #f9f9f9;
+  background-color: var(--card-bg);
   border-radius: 8px;
 }
 
@@ -39,14 +95,15 @@
   align-items: flex-start;
   gap: 8px;
   padding: 12px;
-  background-color: #fff;
+  background-color: var(--dark-bg);
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.2s ease;
+  border: 1px solid var(--border-color);
 }
 
 .trending-item:hover {
-  background-color: #f0f0f0;
+  background-color: var(--hover-bg);
 }
 
 .trending-content {
@@ -58,7 +115,7 @@
   margin: 0 0 4px 0;
   font-size: 14px;
   font-weight: 600;
-  color: #000;
+  color: var(--light-text);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -66,13 +123,13 @@
 
 .trending-count {
   font-size: 12px;
-  color: #999;
+  color: var(--gray-text);
 }
 
 .trending-close {
   background: none;
   border: none;
-  color: #999;
+  color: var(--gray-text);
   cursor: pointer;
   font-size: 12px;
   padding: 0;
@@ -81,12 +138,12 @@
 }
 
 .trending-close:hover {
-  color: #666;
+  color: var(--light-text);
 }
 
 .newsletter-section {
   padding: 16px;
-  background-color: #f9f9f9;
+  background-color: var(--card-bg);
   border-radius: 8px;
 }
 
@@ -99,33 +156,34 @@
 .newsletter-content p {
   margin: 0;
   font-size: 13px;
-  color: #666;
+  color: var(--gray-text);
   line-height: 1.4;
 }
 
 .newsletter-content input {
   padding: 10px 12px;
-  border: 1px solid #d0d0d0;
+  border: 1px solid var(--input-border);
   border-radius: 6px;
   font-size: 13px;
   font-family: inherit;
-  color: #333;
+  color: var(--light-text);
+  background-color: var(--input-bg);
   transition: all 0.2s ease;
   box-sizing: border-box;
 }
 
 .newsletter-content input::placeholder {
-  color: #999;
+  color: var(--gray-text);
 }
 
 .newsletter-content input:focus {
   outline: none;
-  border-color: #0a66c2;
+  border-color: var(--primary-color);
 }
 
 .newsletter-btn {
   padding: 10px 12px;
-  background-color: #0a66c2;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   color: #fff;
   border: none;
   border-radius: 6px;
@@ -137,7 +195,8 @@
 }
 
 .newsletter-btn:hover {
-  background-color: #054b8a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 217, 255, 0.3);
 }
 
 @media (max-width: 1200px) {

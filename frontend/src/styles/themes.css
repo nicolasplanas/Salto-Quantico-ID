@@ -1,0 +1,32 @@
+/* Tema Escuro (padrão) */
+:root,
+[data-theme="dark"] {
+  --primary-color: #00d9ff;
+  --secondary-color: #6a2eff;
+  --accent-color: #ff006e;
+  --dark-bg: #0a0e27;
+  --darker-bg: #050a1a;
+  --light-text: #ffffff;
+  --gray-text: #b0b9c1;
+  --border-color: #1a2942;
+  --card-bg: rgba(20, 25, 50, 0.8);
+  --input-bg: rgba(255, 255, 255, 0.05);
+  --input-border: rgba(0, 217, 255, 0.2);
+  --hover-bg: rgba(0, 217, 255, 0.1);
+}
+
+/* Tema Claro */
+[data-theme="light"] {
+  --primary-color: #00a8cc;
+  --secondary-color: #5a1d9d;
+  --accent-color: #d90554;
+  --dark-bg: #ffffff;
+  --darker-bg: #f8f9fa;
+  --light-text: #1a1a1a;
+  --gray-text: #555555;
+  --border-color: #e0e0e0;
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --input-bg: rgba(0, 0, 0, 0.03);
+  --input-border: rgba(0, 168, 204, 0.3);
+  --hover-bg: rgba(0, 168, 204, 0.1);
+}

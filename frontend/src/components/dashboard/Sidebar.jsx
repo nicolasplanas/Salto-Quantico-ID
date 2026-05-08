@@ -48,6 +48,10 @@ export default function Sidebar({ user }) {
           <span className="icon">🔔</span>
           <span className="label">Notificações</span>
         </a>
+        <a href="#" className="nav-item">
+          <span className="icon">⚙️</span>
+          <span className="label">Configurações</span>
+        </a>
       </nav>
 
       <div className="sidebar-footer">
@@ -55,7 +59,7 @@ export default function Sidebar({ user }) {
           <img src={user?.avatar} alt={user?.name} className="user-avatar" />
           <div className="user-details">
             <p className="user-name">{user?.name}</p>
-            <p className="user-role">Procurando oportunidades</p>
+            <p className="user-email">{user?.email}</p>
           </div>
         </div>
         <button onClick={handleLogout} className="logout-btn">

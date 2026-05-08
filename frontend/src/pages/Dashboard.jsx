@@ -17,7 +17,7 @@ export default function Dashboard() {
       return;
     }
 
-    // Aqui você faria a chamada da API para obter dados do usuário
+    // Buscar dados do usuário do banco de dados
     const fetchUserData = async () => {
       try {
         const response = await fetch('http://localhost:5000/api/auth/profile', {
@@ -28,10 +28,17 @@ export default function Dashboard() {
 
         if (response.ok) {
           const data = await response.json();
-          setUser(data);
+          setUser({
+            id: data.id,
+            name: data.name,
+            email: data.email,
+            avatar: data.avatar || 'https://i.pravatar.cc/150?img=1'
+          });
         } else if (response.status === 401) {
           localStorage.removeItem('token');
           navigate('/login');
+        } else {
+          console.error('Erro ao buscar dados do usuário:', response.status);
         }
       } catch (error) {
         console.error('Erro ao buscar dados do usuário:', error);
@@ -40,16 +47,7 @@ export default function Dashboard() {
       }
     };
 
-    // Simular dados do usuário se não conseguir conectar ao backend
-    setTimeout(() => {
-      setUser({
-        id: 1,
-        name: 'João Silva',
-        email: 'joao@example.com',
-        avatar: 'https://i.pravatar.cc/150?img=1'
-      });
-      setLoading(false);
-    }, 500);
+    fetchUserData();
   }, [navigate]);
 
   if (loading) {
@@ -60,7 +58,7 @@ export default function Dashboard() {
     <div className="dashboard">
       <Sidebar user={user} />
       <Feed user={user} />
-      <RightPanel />
+      <RightPanel user={user} />
     </div>
   );
 }

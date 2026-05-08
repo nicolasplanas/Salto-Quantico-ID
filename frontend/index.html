@@ -5,6 +5,19 @@
     <link class="icon-page" rel="icon" type="image/svg+xml" href="/SQ.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Salto Quântico ID</title>
+    <script>
+      // Inicializar tema antes de renderizar para evitar flash
+      (function() {
+        const theme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', theme);
+        document.documentElement.style.colorScheme = theme;
+        if (theme === 'light') {
+          document.body.classList.add('theme-light');
+        } else {
+          document.body.classList.add('theme-dark');
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
