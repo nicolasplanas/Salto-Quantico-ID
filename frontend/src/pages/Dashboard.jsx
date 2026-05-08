@@ -20,7 +20,8 @@ export default function Dashboard() {
     // Buscar dados do usuário do banco de dados
     const fetchUserData = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/auth/profile', {
+        const baseUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+        const response = await fetch(`${baseUrl}/api/auth/profile`, {
           headers: {
             'Authorization': `Bearer ${token}`
           }

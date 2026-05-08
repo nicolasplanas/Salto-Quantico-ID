@@ -28,7 +28,8 @@ export default function Login() {
 
     try {
       // Aqui você fará a chamada da API de autenticação
-      const response = await fetch('http://localhost:5000/api/auth/login', {
+      const baseUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+      const response = await fetch(`${baseUrl}/api/auth/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

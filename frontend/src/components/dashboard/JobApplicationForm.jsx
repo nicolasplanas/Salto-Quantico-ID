@@ -73,7 +73,8 @@ export default function JobApplicationForm({ job, onSubmit, onCancel }) {
       });
       formDataToSend.append('job_id', job.id);
 
-      const response = await fetch('http://localhost:5000/api/applications', {
+      const baseUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+      const response = await fetch(`${baseUrl}/api/applications`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
