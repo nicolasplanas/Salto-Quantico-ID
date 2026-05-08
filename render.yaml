@@ -11,11 +11,12 @@ services:
       - key: FLASK_ENV
         value: production
 
-  - type: static
+  - type: web
     name: salto-quantico-frontend
+    runtime: node
     rootDir: frontend
     buildCommand: npm install && npm run build
-    staticPublishPath: dist
+    startCommand: npm start
     envVars:
       - key: VITE_API_URL
         value: https://salto-quantico-backend.onrender.com
