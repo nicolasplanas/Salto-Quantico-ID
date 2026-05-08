@@ -160,8 +160,8 @@
 }
 
 .file-name {
-  font-sivar(--gray-text)14px;
-  color: #666;
+  font-size: 14px;
+  color: var(--gray-text);
   flex: 1;
 }
 
@@ -175,7 +175,8 @@
 .form-footer {
   display: flex;
   gap: 12px;
-  padding: 20px 24px;var(--border-color);
+  padding: 20px 24px;
+  border-top: 1px solid var(--border-color);
   background-color: transparent;
 }
 
@@ -209,8 +210,7 @@
 }
 
 .submit-btn:hover:not(:disabled) {
-  box-shadow: 0 2px 8px rgba(0, 217, 255, 0.3);
-  transform: translateY(-2px
+  box-shadow: 0 2px 8px rgba
   box-shadow: 0 2px 8px rgba(10, 102, 194, 0.3);
 }
 
