@@ -26,6 +26,19 @@ export default function Signup() {
     }));
   };
 
+  const calculateAge = (birthDate) => {
+    const today = new Date();
+    const birth = new Date(birthDate);
+    let age = today.getFullYear() - birth.getFullYear();
+    const monthDiff = today.getMonth() - birth.getMonth();
+    
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birth.getDate())) {
+      age--;
+    }
+    
+    return age;
+  };
+
   const validateForm = () => {
     if (!formData.name.trim()) {
       setError('Nome é obrigatório');
@@ -49,6 +62,12 @@ export default function Signup() {
 
     if (!formData.birth_date) {
       setError('Data de nascimento é obrigatória');
+      return false;
+    }
+
+    const age = calculateAge(formData.birth_date);
+    if (age < 18) {
+      setError('Você deve ter no mínimo 18 anos para se registrar');
       return false;
     }
 
