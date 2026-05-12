@@ -125,19 +125,6 @@ python app.py
 
 ---
 
-## 📚 Documentação
-
-| Arquivo | Descrição |
-|---------|-----------|
-| **00_COMECE_AQUI.md** | Sumário executivo |
-| **INICIO_RAPIDO.md** | Quick start (30 segundos) |
-| **ARQUITETURA.md** | Estrutura técnica |
-| **IMPLEMENTACAO_DASHBOARD.md** | Detalhes do dashboard |
-| **TESTE_DASHBOARD.md** | Guia de testes |
-| **ROADMAP_MELHORIAS.md** | Próximas funcionalidades |
-| **RESUMO_FINAL.md** | Resumo das entregas |
-
----
 
 ## 📊 Estatísticas
 

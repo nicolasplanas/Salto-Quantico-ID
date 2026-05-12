@@ -117,6 +117,7 @@
 }
 
 .form-group label {
+  display: flex;
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--light-text);
@@ -169,8 +170,8 @@
 
 .checkbox-label input[type="checkbox"] {
   appearance: none;
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   cursor: pointer;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(0, 217, 255, 0.2);
@@ -193,6 +194,7 @@
 .checkbox-label input[type="checkbox"]:checked::after {
   content: '✓';
   position: absolute;
+  transform: translate(-50%, -50%);
   color: white;
   font-weight: bold;
   font-size: 0.75rem;
