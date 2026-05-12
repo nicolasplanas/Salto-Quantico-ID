@@ -1,39 +1,47 @@
-import { useState } from 'react';
-import '../../styles/JobApplicationForm.css';
+import { useState }  from 'react';
+import                    '../../styles/JobApplicationForm.css';
 
 export default function JobApplicationForm({ job, onSubmit, onCancel }) {
+
   const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    phone: '',
-    linkedinProfile: '',
-    portfolio: '',
-    resume: null,
-    coverLetter: '',
-    experience: '',
-    expectations: ''
+    fullName        : '',
+    email           : '',
+    phone           : '',
+    linkedinProfile : '',
+    portfolio       : '',
+    resume          : null,
+    coverLetter     : '',
+    experience      : '',
+    expectations    : ''
   });
 
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors]             = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (e) => {
+
     const { name, value } = e.target;
+
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
+
   };
 
   const handleFileChange = (e) => {
+
     const file = e.target.files[0];
+
     setFormData(prev => ({
       ...prev,
       resume: file
     }));
+
   };
 
   const validateForm = () => {
+
     const newErrors = {};
 
     if (!formData.fullName.trim()) {
@@ -54,9 +62,11 @@ export default function JobApplicationForm({ job, onSubmit, onCancel }) {
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
+
   };
 
   const handleSubmit = async (e) => {
+
     e.preventDefault();
 
     if (!validateForm()) {
@@ -66,6 +76,7 @@ export default function JobApplicationForm({ job, onSubmit, onCancel }) {
     setIsSubmitting(true);
 
     try {
+
       // Aqui você faria a chamada da API para enviar a candidatura
       const formDataToSend = new FormData();
       Object.keys(formData).forEach(key => {
@@ -75,28 +86,41 @@ export default function JobApplicationForm({ job, onSubmit, onCancel }) {
 
       const baseUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
       const response = await fetch(`${baseUrl}/api/applications`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${localStorage.getItem('token')}`
+
+        method  : 'POST',
+        headers : {
+          'Authorization' : `Bearer ${localStorage.getItem('token')}`
         },
-        body: formDataToSend
+        body : formDataToSend
+
       });
 
       if (response.ok) {
+
         alert('Candidatura enviada com sucesso!');
         onSubmit(formData);
+
       } else {
+
         alert('Erro ao enviar candidatura');
+
       }
+
     } catch (error) {
+
       console.error('Erro:', error);
       alert('Erro ao enviar candidatura');
+
     } finally {
+
       setIsSubmitting(false);
+
     }
+
   };
 
   return (
+
     <div className="application-form-overlay">
       <form className="application-form" onSubmit={handleSubmit}>
         <div className="form-header">
@@ -236,5 +260,7 @@ export default function JobApplicationForm({ job, onSubmit, onCancel }) {
         </div>
       </form>
     </div>
+
   );
+
 }

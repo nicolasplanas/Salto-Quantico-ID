@@ -1,21 +1,25 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import '../../styles/Sidebar.css';
+import { useState }           from 'react';
+import { useNavigate }        from 'react-router-dom';
+import                             '../../styles/Sidebar.css';
 
 export default function Sidebar({ user }) {
-  const navigate = useNavigate();
+
+  const navigate               = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleLogout = () => {
+
     localStorage.removeItem('token');
     navigate('/login');
+
   };
 
   return (
+
     <aside className="sidebar">
       <div className="sidebar-header">
         <h1 className="logo">SaltoQ</h1>
-        <button 
+        <button
           className="menu-toggle"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
@@ -67,5 +71,7 @@ export default function Sidebar({ user }) {
         </button>
       </div>
     </aside>
+
   );
+
 }

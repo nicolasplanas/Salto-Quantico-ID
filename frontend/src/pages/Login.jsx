@@ -1,57 +1,76 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import Header from '../components/home/Header';
-import Footer from '../components/home/Footer';
-import '../styles/Login.css';
+import { useState }            from 'react';
+import { useNavigate }         from 'react-router-dom';
+import Header                  from '../components/home/Header';
+import Footer                  from '../components/home/Footer';
+import                              '../styles/Login.css';
 
 export default function Login() {
-  const navigate = useNavigate();
+
+  const navigate                = useNavigate();
   const [formData, setFormData] = useState({
-    email: '',
-    password: ''
+    email    : '',
+    password : ''
   });
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError]     = useState('');
 
   const handleChange = (e) => {
+
     const { name, value } = e.target;
+
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
+
   };
 
   const handleSubmit = async (e) => {
+
     e.preventDefault();
     setLoading(true);
     setError('');
 
     try {
+
       // Aqui você fará a chamada da API de autenticação
       const baseUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
       const response = await fetch(`${baseUrl}/api/auth/login`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
+
+        method  : 'POST',
+        headers : {
+          'Content-Type' : 'application/json'
         },
-        body: JSON.stringify(formData)
+        body : JSON.stringify(formData)
+
       });
 
       if (response.ok) {
+
         const data = await response.json();
         localStorage.setItem('token', data.token);
         navigate('/dashboard');
+
       } else {
+
         setError('Email ou senha inválidos');
+
       }
+
     } catch (error) {
+
       setError('Erro ao conectar ao servidor');
+
     } finally {
+
       setLoading(false);
+
     }
+
   };
 
   return (
+
     <div className="login-page">
       <Header showNav={false} />
 
@@ -118,6 +137,9 @@ export default function Login() {
       </section>
 
       <Footer />
+
     </div>
+
   );
+
 }

@@ -1,30 +1,32 @@
 import './Tech.css';
 
 export default function Tech() {
+
   const technologies = [
     {
-      name: 'Quantum Computing',
-      level: 95,
-      description: 'Processadores quânticos de última geração'
+      name        : 'Quantum Computing',
+      level       : 95,
+      description : 'Processadores quânticos de última geração'
     },
     {
-      name: 'Cloud Integration',
-      level: 88,
-      description: 'Infraestrutura em nuvem escalável'
+      name        : 'Cloud Integration',
+      level       : 88,
+      description : 'Infraestrutura em nuvem escalável'
     },
     {
-      name: 'AI & ML',
-      level: 92,
-      description: 'Modelos de aprendizado de máquina avançados'
+      name        : 'AI & ML',
+      level       : 92,
+      description : 'Modelos de aprendizado de máquina avançados'
     },
     {
-      name: 'Blockchain',
-      level: 85,
-      description: 'Segurança e transparência distribuída'
+      name        : 'Blockchain',
+      level       : 85,
+      description : 'Segurança e transparência distribuída'
     }
   ];
 
   return (
+
     <section id="tech" className="tech section alternate">
       <div className="container">
         <div className="tech-header">

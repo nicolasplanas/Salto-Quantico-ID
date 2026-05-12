@@ -1,12 +1,14 @@
-import { useTheme } from '../context/ThemeContext';
-import './ThemeToggle.css';
+import { useTheme }  from '../context/ThemeContext';
+import              './ThemeToggle.css';
 
 const ThemeToggle = () => {
+
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <button 
-      className="theme-toggle" 
+
+    <button
+      className="theme-toggle"
       onClick={toggleTheme}
       title={`Trocar para tema ${theme === 'dark' ? 'claro' : 'escuro'}`}
       aria-label="Toggle theme"
@@ -17,7 +19,9 @@ const ThemeToggle = () => {
         <span className="theme-icon">🌙</span>
       )}
     </button>
+
   );
+
 };
 
 export default ThemeToggle;

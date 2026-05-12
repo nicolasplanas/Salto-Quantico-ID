@@ -1,21 +1,27 @@
-import { useState } from 'react';
-import JobApplicationForm from './JobApplicationForm';
-import '../../styles/JobPost.css';
+import { useState }          from 'react';
+import JobApplicationForm    from './JobApplicationForm';
+import                            '../../styles/JobPost.css';
 
 export default function JobPost({ job, isExpanded, onToggle, onApply }) {
+
   const [showForm, setShowForm] = useState(false);
 
   const handleApplyClick = () => {
+
     setShowForm(true);
+
   };
 
   const handleFormSubmit = (formData) => {
+
     console.log('Aplicação enviada:', formData);
     setShowForm(false);
     onApply();
+
   };
 
   return (
+
     <article className={`job-post ${isExpanded ? 'expanded' : ''}`}>
       <div className="post-header">
         <img src={job.author.avatar} alt={job.author.name} className="post-avatar" />
@@ -63,7 +69,7 @@ export default function JobPost({ job, isExpanded, onToggle, onApply }) {
             </div>
 
             {showForm ? (
-              <JobApplicationForm 
+              <JobApplicationForm
                 job={job}
                 onSubmit={handleFormSubmit}
                 onCancel={() => setShowForm(false)}
@@ -76,7 +82,7 @@ export default function JobPost({ job, isExpanded, onToggle, onApply }) {
       <div className="post-footer">
         <button className="footer-action">👍 Interessado</button>
         <button className="footer-action">💬 Comentar</button>
-        <button 
+        <button
           className={`footer-action apply-btn ${showForm ? 'active' : ''}`}
           onClick={handleApplyClick}
         >
@@ -95,5 +101,7 @@ export default function JobPost({ job, isExpanded, onToggle, onApply }) {
         </button>
       )}
     </article>
+
   );
+
 }

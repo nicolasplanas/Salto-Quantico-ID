@@ -1,40 +1,42 @@
 import './Services.css';
 
 export default function Services() {
+
   const services = [
     {
-      icon: '⚙️',
-      title: 'Processamento Quântico',
-      description: 'Acesso a poder computacional exponencial para resolver problemas complexos em segundos.'
+      icon      : '⚙️',
+      title     : 'Processamento Quântico',
+      description : 'Acesso a poder computacional exponencial para resolver problemas complexos em segundos.'
     },
     {
-      icon: '🔐',
-      title: 'Criptografia Quântica',
-      description: 'Proteção máxima de dados com algoritmos quânticos de segurança incomparável.'
+      icon      : '🔐',
+      title     : 'Criptografia Quântica',
+      description : 'Proteção máxima de dados com algoritmos quânticos de segurança incomparável.'
     },
     {
-      icon: '📊',
-      title: 'Análise Avançada',
-      description: 'Processamento de grandes volumes de dados com insights profundos e precisão.'
+      icon      : '📊',
+      title     : 'Análise Avançada',
+      description : 'Processamento de grandes volumes de dados com insights profundos e precisão.'
     },
     {
-      icon: '🤖',
-      title: 'Machine Learning Quântico',
-      description: 'Modelos de IA treinados com velocidade e eficiência quânticas.'
+      icon      : '🤖',
+      title     : 'Machine Learning Quântico',
+      description : 'Modelos de IA treinados com velocidade e eficiência quânticas.'
     },
     {
-      icon: '💼',
-      title: 'Consultoria Estratégica',
-      description: 'Orientação especializada para integrar computação quântica em suas operações.'
+      icon      : '💼',
+      title     : 'Consultoria Estratégica',
+      description : 'Orientação especializada para integrar computação quântica em suas operações.'
     },
     {
-      icon: '🎓',
-      title: 'Treinamento Corporativo',
-      description: 'Programas de capacitação para sua equipe em tecnologia quântica.'
+      icon      : '🎓',
+      title     : 'Treinamento Corporativo',
+      description : 'Programas de capacitação para sua equipe em tecnologia quântica.'
     }
   ];
 
   return (
+
     <section id="services" className="services section">
       <div className="container">
         <div className="services-header">

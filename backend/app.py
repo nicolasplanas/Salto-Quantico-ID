@@ -1,13 +1,14 @@
 import os
-from flask import Flask
+
+from flask      import Flask
 from flask_cors import CORS
-from models import db
-from routes import register_routes
+from models     import db
+from routes     import register_routes
 
 app = Flask(__name__)
 
 # Configuração do SQLAlchemy
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'sqlite:///salto_quantico.db')
+app.config['SQLALCHEMY_DATABASE_URI']        = os.environ.get('DATABASE_URL', 'sqlite:///salto_quantico.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # Inicializar SQLAlchemy

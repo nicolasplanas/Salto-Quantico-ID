@@ -1,14 +1,18 @@
 import { useEffect } from 'react';
-import Header from '../components/home/Header';
-import Footer from '../components/home/Footer';
-import '../styles/Terms.css';
+import Header        from '../components/home/Header';
+import Footer        from '../components/home/Footer';
+import                    '../styles/Terms.css';
 
 export default function Terms() {
+
   useEffect(() => {
+
     window.scrollTo(0, 0);
+
   }, []);
 
   return (
+
     <div className="terms-page">
       <Header showNav={false} />
 

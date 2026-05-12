@@ -1,7 +1,9 @@
 import '../../styles/CreatePost.css';
 
 export default function CreatePost({ user }) {
+
   return (
+
     <div className="create-post">
       <div className="create-post-content">
         <img src={user?.avatar} alt={user?.name} className="create-post-avatar" />
@@ -28,5 +30,7 @@ export default function CreatePost({ user }) {
         </button>
       </div>
     </div>
+
   );
+
 }

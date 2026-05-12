@@ -1,30 +1,37 @@
-import { useState } from 'react';
-import './Contact.css';
+import { useState }  from 'react';
+import              './Contact.css';
 
 export default function Contact() {
+
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    message: ''
+    name    : '',
+    email   : '',
+    company : '',
+    message : ''
   });
 
   const handleChange = (e) => {
+
     const { name, value } = e.target;
+
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
+
   };
 
   const handleSubmit = (e) => {
+
     e.preventDefault();
     console.log('Form submitted:', formData);
     setFormData({ name: '', email: '', company: '', message: '' });
     alert('Obrigado pela sua mensagem! Entraremos em contato em breve.');
+
   };
 
   return (
+
     <section id="contact" className="contact section">
       <div className="container">
         <div className="contact-header">

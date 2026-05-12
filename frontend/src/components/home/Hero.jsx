@@ -1,8 +1,10 @@
-import './Hero.css';
+import               './Hero.css';
 import quantumOrb from '../../assets/quantum-orb.svg';
 
 export default function Hero() {
+
   return (
+
     <section id="home" className="hero">
       <div className="container">
         <div className="hero-content">
@@ -27,5 +29,7 @@ export default function Hero() {
         </div>
       </div>
     </section>
+
   );
+
 }

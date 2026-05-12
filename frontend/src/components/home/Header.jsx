@@ -1,11 +1,13 @@
-import { useState } from 'react';
-import ThemeToggle from '../ThemeToggle';
-import './Header.css';
+import { useState }     from 'react';
+import ThemeToggle      from '../ThemeToggle';
+import                       './Header.css';
 
 export default function Header({ showNav = true }) {
+
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
+
     <header className="header">
       <div className="container">
         <div className="header-content">
@@ -42,5 +44,7 @@ export default function Header({ showNav = true }) {
         </div>
       </div>
     </header>
+
   );
+
 }

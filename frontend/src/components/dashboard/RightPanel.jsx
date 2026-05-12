@@ -1,6 +1,7 @@
 import '../../styles/RightPanel.css';
 
 export default function RightPanel({ user }) {
+
   const trending = [
     { id: 1, title: 'Desenvolvimento Web', count: '2.3K posts' },
     { id: 2, title: 'React.js', count: '1.8K posts' },
@@ -10,6 +11,7 @@ export default function RightPanel({ user }) {
   ];
 
   return (
+
     <aside className="right-panel">
       <div className="profile-section">
         <h3 className="section-title">Meu Perfil</h3>
@@ -45,5 +47,7 @@ export default function RightPanel({ user }) {
         </div>
       </div>
     </aside>
+
   );
+
 }

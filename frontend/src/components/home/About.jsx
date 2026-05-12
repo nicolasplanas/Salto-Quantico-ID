@@ -1,7 +1,9 @@
 import './About.css';
 
 export default function About() {
+
   return (
+
     <section id="about" className="about section alternate">
       <div className="container">
         <div className="about-header">
@@ -15,8 +17,8 @@ export default function About() {
           <div className="about-text">
             <h3>Inovação que Transforma o Futuro</h3>
             <p>
-              Fundada em 2026, Salto Quântico ID é uma startup com o objetivo de 
-              conectar pessoas, empresas e instituições de ensino através de um 
+              Fundada em 2026, Salto Quântico ID é uma startup com o objetivo de
+              conectar pessoas, empresas e instituições de ensino através de um
               banco de dados inteligente de talentos e oportunidades.
             </p>
             <p>
