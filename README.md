@@ -15,33 +15,39 @@ Criar uma solução completa de plataforma de vagas inspirada no **LinkedIn**, c
 ## 📊 Estrutura do Projeto
 
 ```
+# Estrutura do Projeto
+
 Salto-Quantico-ID/
 ├── backend/                    # API Flask
 │   ├── app.py                 # Configuração principal
 │   ├── models.py              # Modelos de dados
 │   ├── routes.py              # Endpoints da API
-│   ├── requirements.txt        # Dependências Python
-│   └── instance/               # Dados do banco
+│   ├── requirements.txt       # Dependências Python
+│   └── instance/              # Dados do banco
 │
-├── frontend/                   # Aplicação React
+├── frontend/                  # Aplicação React
 │   ├── src/
 │   │   ├── pages/
-│   │   │   ├── Home.jsx        # Página inicial
-│   │   │   ├── Login.jsx       # Login
-│   │   │   ├── SignUp.jsx      # Cadastro
-│   │   │   └── Dashboard.jsx   # Dashboard pós-login ✨
+│   │   │   ├── Home.jsx       # Página inicial
+│   │   │   ├── Login.jsx      # Login
+│   │   │   ├── SignUp.jsx     # Cadastro
+│   │   │   └── Dashboard.jsx  # Dashboard pós-login
+│   │   │
 │   │   ├── components/
-│   │   │   ├── home/           # Componentes home
-│   │   │   ├── dashboard/      # Componentes dashboard ✨
+│   │   │   ├── home/          # Componentes da Home
+│   │   │   ├── dashboard/     # Componentes do dashboard
 │   │   │   │   ├── Sidebar.jsx
 │   │   │   │   ├── Feed.jsx
 │   │   │   │   ├── JobPost.jsx
 │   │   │   │   ├── JobApplicationForm.jsx
 │   │   │   │   ├── CreatePost.jsx
 │   │   │   │   └── RightPanel.jsx
+│   │   │   │
 │   │   │   └── ThemeToggle.jsx
+│   │   │
 │   │   ├── context/
 │   │   │   └── ThemeContext.jsx
+│   │   │
 │   │   ├── styles/
 │   │   │   ├── themes.css
 │   │   │   ├── Dashboard.css
@@ -51,14 +57,70 @@ Salto-Quantico-ID/
 │   │   │   ├── JobApplicationForm.css
 │   │   │   ├── CreatePost.css
 │   │   │   └── RightPanel.css
+│   │   │
 │   │   ├── App.jsx
 │   │   └── main.jsx
+│   │
 │   ├── package.json
 │   └── vite.config.js
 │
-├── render.yaml                 # Configuração Render
-└── Documentação (10 arquivos)
+├── instance/                  # Banco de dados SQLite
+├── render.yaml                # Configuração de deploy
+├── package.json               # Dependências gerais
+├── package-lock.json
+└── README.md
 ```
+
+## 🗂 Organização da Arquitetura
+
+### 📝 Backend
+
+O backend foi desenvolvido utilizando Flask e é responsável pela autenticação, persistência de dados, gerenciamento de usuários e comunicação com o banco de dados.
+
+### 🖥 Frontend
+
+O frontend utiliza React com Vite, organizado de forma modular para facilitar manutenção e escalabilidade.
+
+A estrutura é dividida em:
+
+* `pages/`: páginas principais da aplicação.
+* `components/`: componentes reutilizáveis organizados por funcionalidade.
+* `context/`: gerenciamento de estado global.
+* `hooks/`: hooks customizados.
+* `services/`: integração com API/backend.
+* `styles/`: estilos globais e específicos.
+* `utils/`: funções auxiliares reutilizáveis.
+
+## ⚙ Tecnologias Utilizadas
+
+### 🖥 Frontend
+
+* React
+* Vite
+* React Router DOM
+* Context API
+* CSS Modules / CSS Global
+
+### 📝 Backend
+
+* Flask
+* SQLAlchemy
+* SQLite
+* JWT Authentication
+
+### 📤 Deploy
+
+* Render (Backend + Frontend)
+
+## 📌 Objetivo da Estrutura
+
+A arquitetura foi organizada para:
+
+* Facilitar manutenção do código
+* Permitir escalabilidade futura
+* Melhorar reutilização de componentes
+* Separar responsabilidades entre frontend e backend
+* Tornar o projeto mais legível para colaboradores
 
 ---
 
@@ -157,14 +219,6 @@ python app.py
 
 ---
 
-## 🔧 Stack
-
-**Frontend:** React 19 + Vite + React Router + CSS3  
-**Backend:** Flask + SQLAlchemy + SQLite  
-**Deploy:** Render (Backend + Frontend)
-
----
-
 ## 📞 Status
 
 | Aspecto | Status |
@@ -188,5 +242,4 @@ python app.py
 
 ---
 
-**Versão:** 1.0 | **Status:** ✅ PRONTO PARA PRODUÇÃO  
 Projeto Integrador Univesp
