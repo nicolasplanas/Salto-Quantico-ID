@@ -196,8 +196,8 @@ python app.py
 
 | Métrica | Quantidade |
 |---|---|
-| Componentes React | 10+ |
-| Arquivos CSS | 8+ |
+| Estruturação | React componentizado |
+| Estilização | CSS modularizado |
 | Estrutura Responsiva | 3 breakpoints |
 | Arquitetura | Modular por componentes |
 
