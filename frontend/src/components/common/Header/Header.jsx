@@ -1,5 +1,5 @@
 import { useState }     from 'react';
-import ThemeToggle      from '../ThemeToggle';
+import ThemeToggle      from '../ThemeToggle/ThemeToggle';
 import                       './Header.css';
 
 export default function Header({ showNav = true }) {

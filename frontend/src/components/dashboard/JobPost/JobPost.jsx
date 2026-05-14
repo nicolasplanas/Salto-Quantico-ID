@@ -1,6 +1,6 @@
 import { useState }          from 'react';
-import JobApplicationForm    from './JobApplicationForm';
-import                            '../../styles/JobPost.css';
+import JobApplicationForm    from '../JobApplicationForm/JobApplicationForm';
+import                            './JobPost.css';
 
 export default function JobPost({ job, isExpanded, onToggle, onApply }) {
 

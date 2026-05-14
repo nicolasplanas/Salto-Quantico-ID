@@ -1,4 +1,4 @@
-import '../../styles/CreatePost.css';
+import './CreatePost.css';
 
 export default function CreatePost({ user }) {
 

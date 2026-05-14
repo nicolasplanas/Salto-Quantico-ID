@@ -1,8 +1,8 @@
 import { useState }            from 'react';
 import { useNavigate }         from 'react-router-dom';
-import Header                  from '../components/home/Header';
-import Footer                  from '../components/home/Footer';
-import                              '../styles/Login.css';
+import Header                  from '../../../components/common/Header/Header';
+import Footer                  from '../../../components/common/Footer/Footer';
+import                              './Login.css';
 
 export default function Login() {
 
@@ -57,6 +57,7 @@ export default function Login() {
 
       }
 
+    // eslint-disable-next-line no-unused-vars
     } catch (error) {
 
       setError('Erro ao conectar ao servidor');

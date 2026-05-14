@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
-import Header        from '../components/home/Header';
-import Footer        from '../components/home/Footer';
-import                    '../styles/Terms.css';
+import Header        from '../../components/common/Header/Header';
+import Footer        from '../../components/common/Footer/Footer';
+import                    './Terms.css';
 
 export default function Terms() {
 

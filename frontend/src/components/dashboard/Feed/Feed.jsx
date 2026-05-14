@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import JobPost      from './JobPost';
-import CreatePost   from './CreatePost';
-import                   '../../styles/Feed.css';
+import JobPost      from '../JobPost/JobPost';
+import CreatePost   from '../CreatePost/CreatePost';
+import                   './Feed.css';
 
 const MOCK_JOBS = [
   {
@@ -68,6 +68,7 @@ const MOCK_JOBS = [
 
 export default function Feed({ user }) {
 
+  // eslint-disable-next-line no-unused-vars
   const [jobs, setJobs]                     = useState(MOCK_JOBS);
   const [expandedJobId, setExpandedJobId]   = useState(null);
 

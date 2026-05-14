@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Routes, Route }  from 'react-router-dom';
-import { ThemeProvider }                           from './context/ThemeContext';
-import Home                                        from './pages/Home';
-import Login                                       from './pages/Login';
-import Signup                                      from './pages/SignUp';
-import Dashboard                                   from './pages/Dashboard';
-import Terms                                       from './pages/Terms';
+import { ThemeProvider }                           from '../context/ThemeContext';
+import Home                                        from '../pages/home/Home';
+import Login                                       from '../pages/auth/Login/Login';
+import Signup                                      from '../pages/auth/SignUp/SignUp';
+import Dashboard                                   from '../pages/dashboard/Dashboard';
+import Terms                                       from '../pages/terms/Terms';
 import                                                  './App.css';
 
 function App() {

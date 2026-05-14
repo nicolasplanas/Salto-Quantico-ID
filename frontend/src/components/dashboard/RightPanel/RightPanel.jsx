@@ -1,4 +1,4 @@
-import '../../styles/RightPanel.css';
+import './RightPanel.css';
 
 export default function RightPanel({ user }) {
 

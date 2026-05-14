@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useNavigate }         from 'react-router-dom';
-import Sidebar                 from '../components/dashboard/Sidebar';
-import Feed                    from '../components/dashboard/Feed';
-import RightPanel              from '../components/dashboard/RightPanel';
-import                              '../styles/Dashboard.css';
+import Sidebar                 from '../../components/dashboard/Sidebar/Sidebar';
+import Feed                    from '../../components/dashboard/Feed/Feed';
+import RightPanel              from '../../components/dashboard/RightPanel/RightPanel';
+import                              './Dashboard.css';
 
 export default function Dashboard() {
 

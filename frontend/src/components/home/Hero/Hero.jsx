@@ -1,5 +1,5 @@
 import               './Hero.css';
-import quantumOrb from '../../assets/quantum-orb.svg';
+import quantumOrb from '../../../assets/svg/quantum-orb.svg';
 
 export default function Hero() {
 
