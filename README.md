@@ -15,7 +15,6 @@ Criar uma solução completa de plataforma de vagas inspirada no **LinkedIn**, c
 ## 📊 Estrutura do Projeto
 
 ```
-# Estrutura do Projeto
 
 Salto-Quantico-ID/
 ├── backend/                    # API Flask
@@ -71,6 +70,8 @@ Salto-Quantico-ID/
 └── README.md
 ```
 
+---
+
 ## 🗂 Organização da Arquitetura
 
 ### 📝 Backend
@@ -90,6 +91,8 @@ A estrutura é dividida em:
 * `services/`: integração com API/backend.
 * `styles/`: estilos globais e específicos.
 * `utils/`: funções auxiliares reutilizáveis.
+
+---
 
 ## ⚙ Tecnologias Utilizadas
 
@@ -111,6 +114,8 @@ A estrutura é dividida em:
 ### 📤 Deploy
 
 * Render (Backend + Frontend)
+
+---
 
 ## 📌 Objetivo da Estrutura
 
@@ -187,16 +192,14 @@ python app.py
 
 ---
 
-
 ## 📊 Estatísticas
 
 | Métrica | Quantidade |
-|---------|-----------|
+|---|---|
 | Componentes React | 10+ |
-| Arquivos CSS | 10+ |
-| Linhas de código | ~2.000+ |
-| Documentação | 10 arquivos |
-| Breakpoints responsivos | 3 |
+| Arquivos CSS | 8+ |
+| Estrutura Responsiva | 3 breakpoints |
+| Arquitetura | Modular por componentes |
 
 ---
 
@@ -223,11 +226,9 @@ python app.py
 
 | Aspecto | Status |
 |--------|--------|
-| Frontend | ✅ Completo |
+| Frontend | ⚠️ Em desenvolvimento |
 | Backend | ⚠️ Em desenvolvimento |
-| Dashboard | ✅ Completo |
 | Deploy | ✅ Configurado |
-| Testes | ✅ OK |
 | Documentação | ✅ Completo |
 
 ---
@@ -241,5 +242,6 @@ python app.py
 5. Implemente melhorias
 
 ---
+obs: Está propenso a mudanças
 
 Projeto Integrador Univesp
