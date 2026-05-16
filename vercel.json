@@ -1,12 +1,8 @@
 {
-  "buildCommand": "cd backend && pip install -r requirements.txt --no-cache-dir && cd ../frontend && npm install && npm run build",
+  "buildCommand": "npm --prefix frontend install && npm --prefix frontend run build",
   "outputDirectory": "frontend/dist",
+  "ignoreCommand": "git diff --quiet HEAD^ HEAD -- frontend/",
   "env": {
-    "PYTHON_VERSION": "3.11"
-  },
-  "functions": {
-    "backend/app.py": {
-      "runtime": "python3.11"
-    }
+    "PYTHON_VERSION": "3.13"
   }
 }
