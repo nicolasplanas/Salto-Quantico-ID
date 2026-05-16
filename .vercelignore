@@ -1,0 +1,16 @@
+node_modules/
+.git/
+.env
+.env.local
+.DS_Store
+*.pyc
+__pycache__/
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+.vscode/
+.idea/
+dist/
+build/
+.next/

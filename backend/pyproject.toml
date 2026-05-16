@@ -1,0 +1,16 @@
+[project]
+name = "salto-quantico-backend"
+version = "1.0.0"
+description = "Backend for Salto Quantico ID"
+requires-python = ">=3.10"
+dependencies = [
+    "Flask==3.0.0",
+    "Flask-CORS==4.0.0",
+    "Flask-SQLAlchemy==3.0.5",
+    "python-dotenv==1.0.0",
+    "Werkzeug==3.0.0",
+    "gunicorn==21.2.0",
+]
+
+[tool.pip]
+index-url = "https://pypi.org/simple/"
