@@ -84,12 +84,16 @@ export default function Dashboard() {
 
   }
 
+  const handleUserUpdate = (updatedUser) => {
+    setUser(updatedUser);
+  };
+
   return (
 
     <div className="dashboard">
-      <Sidebar user={user} />
+      <Sidebar user={user} onUserUpdate={handleUserUpdate} />
       <Feed user={user} />
-      <RightPanel user={user} />
+      <RightPanel user={user} onUserUpdate={handleUserUpdate} />
     </div>
 
   );

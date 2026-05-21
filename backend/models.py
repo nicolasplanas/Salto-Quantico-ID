@@ -12,5 +12,6 @@ class Talent(db.Model):
     birth_date     = db.Column(db.Date)
     area           = db.Column(db.String(100))
     skills         = db.Column(db.Text)
+    avatar_url     = db.Column(db.String(500))
     terms_accepted = db.Column(db.Boolean, default=False)
     created_at     = db.Column(db.DateTime, default=datetime.utcnow)

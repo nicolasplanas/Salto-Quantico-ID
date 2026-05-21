@@ -1,6 +1,22 @@
+import { useState } from 'react';
+import EditProfileModal from '../EditProfileModal/EditProfileModal';
 import './RightPanel.css';
 
-export default function RightPanel({ user }) {
+export default function RightPanel({ user, onUserUpdate }) {
+
+  const [showEditModal, setShowEditModal] = useState(false);
+  const [userData, setUserData] = useState(user);
+
+  const handleEditClick = () => {
+    setShowEditModal(true);
+  };
+
+  const handleUpdate = (updatedUser) => {
+    setUserData(updatedUser);
+    if (onUserUpdate) {
+      onUserUpdate(updatedUser);
+    }
+  };
 
   const trending = [
     { id: 1, title: 'Desenvolvimento Web', count: '2.3K posts' },
@@ -16,12 +32,20 @@ export default function RightPanel({ user }) {
       <div className="profile-section">
         <h3 className="section-title">Meu Perfil</h3>
         <div className="profile-card">
-          <img src={user?.avatar} alt={user?.name} className="profile-avatar" />
-          <h4 className="profile-name">{user?.name}</h4>
-          <p className="profile-email">{user?.email}</p>
-          <button className="edit-profile-btn">Editar Perfil</button>
+          <img src={userData?.avatar} alt={userData?.name} className="profile-avatar" />
+          <h4 className="profile-name">{userData?.name}</h4>
+          <p className="profile-email">{userData?.email}</p>
+          <button className="edit-profile-btn" onClick={handleEditClick}>Editar Perfil</button>
         </div>
       </div>
+
+      {showEditModal && (
+        <EditProfileModal
+          user={userData}
+          onClose={() => setShowEditModal(false)}
+          onUpdate={handleUpdate}
+        />
+      )}
 
       <div className="trending-section">
         <h3 className="section-title">Tendências</h3>
