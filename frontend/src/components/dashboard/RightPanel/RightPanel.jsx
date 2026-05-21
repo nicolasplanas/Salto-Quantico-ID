@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import EditProfileModal from '../EditProfileModal/EditProfileModal';
 import './RightPanel.css';
 
@@ -6,6 +6,10 @@ export default function RightPanel({ user, onUserUpdate }) {
 
   const [showEditModal, setShowEditModal] = useState(false);
   const [userData, setUserData] = useState(user);
+
+  useEffect(() => {
+    setUserData(user);
+  }, [user]);
 
   const handleEditClick = () => {
     setShowEditModal(true);

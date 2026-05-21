@@ -22,7 +22,7 @@
 }
 
 .modal-content {
-  background: white;
+  background: var(--darker-bg);
   border-radius: 12px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
   max-width: 500px;
@@ -48,14 +48,14 @@
   justify-content: space-between;
   align-items: center;
   padding: 24px;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid #b8b8b8;
 }
 
 .modal-header h2 {
   margin: 0;
   font-size: 20px;
   font-weight: 600;
-  color: #1a1a1a;
+  color: var(--primary-color);
 }
 
 .close-btn {
@@ -63,7 +63,7 @@
   border: none;
   font-size: 24px;
   cursor: pointer;
-  color: #666;
+  color: var(--text-color);
   padding: 0;
   width: 32px;
   height: 32px;
@@ -90,7 +90,7 @@
   display: block;
   margin-bottom: 8px;
   font-weight: 500;
-  color: #1a1a1a;
+  color: var(--light-text);
   font-size: 14px;
 }
 
@@ -106,7 +106,7 @@
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #e0e0e0;
+  border: 3px solid var(--primary-color);
 }
 
 .file-input {
@@ -115,7 +115,7 @@
 
 .upload-btn {
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: var(--primary-color);
   color: white;
   border-radius: 6px;
   cursor: pointer;
@@ -131,7 +131,7 @@
 .form-input {
   width: 100%;
   padding: 12px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--input-border);
   border-radius: 6px;
   font-size: 14px;
   font-family: inherit;
@@ -140,7 +140,7 @@
 
 .form-input:focus {
   outline: none;
-  border-color: #007bff;
+  border-color: var(--primary-color);
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
 }
 
@@ -162,7 +162,7 @@
   gap: 12px;
   justify-content: flex-end;
   padding: 24px;
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid var(--input-border);
 }
 
 .btn-primary,

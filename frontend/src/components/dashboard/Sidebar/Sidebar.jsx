@@ -1,4 +1,4 @@
-import { useState }           from 'react';
+import { useState, useEffect }           from 'react';
 import { useNavigate }        from 'react-router-dom';
 import EditProfileModal       from '../EditProfileModal/EditProfileModal';
 import                             './Sidebar.css';
@@ -9,6 +9,10 @@ export default function Sidebar({ user, onUserUpdate }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showEditModal, setShowEditModal] = useState(false);
   const [userData, setUserData] = useState(user);
+
+  useEffect(() => {
+    setUserData(user);
+  }, [user]);
 
   const handleLogout = () => {
 
