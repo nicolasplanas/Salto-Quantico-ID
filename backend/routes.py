@@ -105,5 +105,47 @@ def register_routes(app):
             }), 200
             
         except Exception as e:
-            
+
+            return jsonify({'error': str(e)}), 500
+
+    @app.route("/api/auth/profile", methods=["GET"])
+    def get_profile():
+
+        try:
+
+            auth_header = request.headers.get('Authorization')
+
+            if not auth_header or not auth_header.startswith('Bearer '):
+
+                return jsonify({'error': 'Token não fornecido'}), 401
+
+            token = auth_header.split(' ')[1]
+
+            # Extrai o user_id do token (formato: user-{id})
+            if not token.startswith('user-'):
+
+                return jsonify({'error': 'Token inválido'}), 401
+
+            try:
+                user_id = int(token.split('-')[1])
+            except (IndexError, ValueError):
+
+                return jsonify({'error': 'Token inválido'}), 401
+
+            # Buscar usuário
+            user = Talent.query.get(user_id)
+
+            if not user:
+
+                return jsonify({'error': 'Usuário não encontrado'}), 404
+
+            return jsonify({
+                'id'    : user.id,
+                'name'  : user.name,
+                'email' : user.email,
+                'avatar': f'https://i.pravatar.cc/150?img={user.id % 70}'
+            }), 200
+
+        except Exception as e:
+
             return jsonify({'error': str(e)}), 500
